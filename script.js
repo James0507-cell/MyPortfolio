@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
     
-    // --- Theme Toggle Logic ---
     const toggleBtn = document.getElementById('theme-toggle');
     const currentTheme = localStorage.getItem('theme');
     const root = document.documentElement;
@@ -23,7 +22,6 @@ document.addEventListener("DOMContentLoaded", function() {
         toggleBtn.textContent = theme === 'dark' ? '☀️' : '🌙';
     }
 
-    // --- Scroll Animations ---
     const observerOptions = {
         root: null,
         rootMargin: '0px',
@@ -50,8 +48,6 @@ document.addEventListener("DOMContentLoaded", function() {
             const targetElement = document.querySelector(targetId);
             
             if (targetElement) {
-                // Offset calculation handled in CSS via padding-top/margin-top trick,
-                // but we can also do standard scrollIntoView
                 targetElement.scrollIntoView({
                     behavior: "smooth"
                 });
