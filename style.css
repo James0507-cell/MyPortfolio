@@ -1,10 +1,41 @@
+:root {
+    --bg-color: #f4f4f9;
+    --text-color: #333;
+    --nav-bg: #333;
+    --nav-text: white;
+    --home-bg: #e2e2e2;
+    --card-bg: white;
+    --card-border: #ddd;
+    --card-shadow: rgba(0,0,0,0.1);
+    --primary-color: #007BFF;
+    --secondary-color: #28a745;
+    --button-bg: #007BFF;
+    --button-hover: #0056b3;
+}
+
+body.dark-theme {
+    --bg-color: #121212;
+    --text-color: #e0e0e0;
+    --nav-bg: #000000;
+    --nav-text: #e0e0e0;
+    --home-bg: #1e1e1e;
+    --card-bg: #1e1e1e;
+    --card-border: #333;
+    --card-shadow: rgba(255,255,255,0.1);
+    --primary-color: #4dabf7;
+    --secondary-color: #69db7c;
+    --button-bg: #007BFF; 
+    --button-hover: #0056b3;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f9;
-    color: #333;
+    background-color: var(--bg-color);
+    color: var(--text-color);
     line-height: 1.6;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .container {
@@ -14,12 +45,12 @@ body {
 }
 
 nav {
-    background-color: #333;
-    color: white;
+    background-color: var(--nav-bg);
+    color: var(--nav-text);
     padding: 15px 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
 }
 
 nav .container {
@@ -37,7 +68,7 @@ nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    display: flex;
+    display: flex; 
 }
 
 nav ul li {
@@ -45,25 +76,41 @@ nav ul li {
 }
 
 nav ul li a {
-    color: white;
+    color: var(--nav-text);
     text-decoration: none;
     font-weight: bold;
 }
 
+#theme-toggle {
+    background: none;
+    border: 1px solid var(--nav-text);
+    color: var(--nav-text);
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 20px;
+    font-size: 1.2em;
+}
+
+#theme-toggle:hover {
+    background-color: rgba(255,255,255,0.2);
+}
+
 .section {
-    padding: 60px 0;
-    text-align: center;
+    padding: 60px 0; 
+    text-align: center; 
 }
 
 .section h2 {
     margin-bottom: 30px;
     font-size: 2em;
-    color: #333;
+    color: var(--text-color);
 }
 
 #home {
-    background-color: #e2e2e2;
+    background-color: var(--home-bg);
     padding: 80px 0;
+    transition: background-color 0.3s;
 }
 
 #home h1 {
@@ -73,118 +120,98 @@ nav ul li a {
 
 #home p {
     font-size: 1.2em;
-    color: #555;
+    color: var(--text-color); 
     margin-bottom: 20px;
+    opacity: 0.8;
 }
 
 .profile-img {
-    width: 180px;
+    width: 180px; 
     height: 180px;
     border-radius: 50%;
     border: 5px solid white;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px var(--card-shadow); 
     margin-bottom: 20px;
-    object-fit: cover;
+    object-fit: cover; 
 }
 
 #about ul {
     list-style: none;
     padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 10px; 
     margin-top: 20px;
 }
 
 #about ul li {
-    background-color: #007BFF;
+    background-color: var(--primary-color);
     color: white;
     padding: 8px 15px;
     border-radius: 20px;
     font-size: 0.9em;
 }
 
-#projects .project-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
+#projects .project-grid, .achievements-grid {
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 30px; 
     margin-top: 30px;
 }
 
-.project {
-    background-color: white;
-    border: 1px solid #ddd;
-    padding: 25px; /* More padding */
+.project, .achievement-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--card-border);
+    padding: 25px; 
     width: 300px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    text-align: left;
+    box-shadow: 0 4px 8px var(--card-shadow);
+    text-align: left; 
+    transition: background-color 0.3s, border-color 0.3s;
 }
 
 .project h3 {
-    color: #007BFF;
+    color: var(--primary-color);
     margin-top: 0;
-}
-
-.achievements-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-    margin-top: 30px;
-}
-
-.achievement-card {
-    background-color: white;
-    border: 1px solid #ddd;
-    padding: 25px;
-    width: 300px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    text-align: left;
 }
 
 .achievement-card h3 {
-    color: #28a745;
+    color: var(--secondary-color);
     margin-top: 0;
 }
-
 
 #contact p {
     font-size: 1.1em;
     margin: 10px 0;
 }
 
-
 footer {
-    background-color: #333;
-    color: white;
-    padding: 20px;
+    background-color: var(--nav-bg);
+    color: var(--nav-text);
+    padding: 20px; 
     font-size: 0.9em;
 }
 
-/* Button */
 button {
-    background-color: #007BFF;
+    background-color: var(--button-bg);
     color: white;
     border: none;
-    padding: 12px 25px;
+    padding: 12px 25px; 
     cursor: pointer;
     font-size: 1em;
     border-radius: 5px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease; 
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: var(--button-hover);
 }
 
-/* Basic Responsiveness */
 @media (max-width: 768px) {
     nav .container {
-        flex-direction: column;
+        flex-direction: column; 
     }
 
     nav ul {
@@ -193,6 +220,11 @@ button:hover {
 
     nav ul li {
         margin: 0 10px;
+    }
+    
+    #theme-toggle {
+        margin-top: 10px;
+        margin-left: 0;
     }
 
     #home h1 {
@@ -203,7 +235,7 @@ button:hover {
         font-size: 1em;
     }
 
-    .project {
-        width: 90%;
+    .project, .achievement-card {
+        width: 90%; 
     }
 }
