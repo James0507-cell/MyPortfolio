@@ -1,97 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>James Conrad M Santiago | Portfolio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<nav class="navbar">
-    <div class="logo">James Santiago</div>
-    <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#hobbies">Hobbies</a></li>
-        <li><a href="#expertise">Expertise</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
-    <button id="theme-toggle" aria-label="Toggle Dark Mode">🌙</button>
-</nav>
+    <nav>
+        <div class="container">
+            <h2>James Santiago</h2>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#achievements">Achievements</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
 
-<header class="hero">
-    <div class="hero-content fade-in">
-        <img src="placeholder.jpg" alt="Your Profile Picture" class="profile-pic">
-        <h1>James Conrad M Santiago</h1>
-        <p>Web Developer | Programmer | Designer</p>
-        <a href="#contact" class="cta-button">Get In Touch</a>
+    <div id="home" class="section">
+        <div class="container">
+            <img src="thumbnail_Santiago, James Conrad M-11297.jpg" alt="Profile Picture" class="profile-img">
+            <h1>James Conrad M Santiago</h1>
+            <p>Beginner Web Developer</p>
+            <button onclick="sayHello()">Click Me!</button>
+        </div>
     </div>
-</header>
 
-<main>
-    <section id="about" class="fade-in">
-        <h2>About Me</h2>
-        <p>Hello! I'm James Conrad M Santiago, a passionate web developer with a knack for creating dynamic and user-friendly websites. With a background in programming and design, I strive to deliver high-quality digital experiences.</p>
-    </section>
+    <div id="about" class="section">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>Hi, I am James! I am new to programming and learning how to build websites.</p>
+            <p>I like playing games and learning new things.</p>
 
-    <section id="hobbies" class="fade-in">
-        <h2>My Hobbies</h2>
-        <ul class="hobby-list">
-            <li>Coding & Learning New Tech</li>
-            <li>Playing Games</li>
-            <li>Watching Movies / Anime</li>
-            <li>Reading Tech Articles</li>
-        </ul>
-    </section>
-
-    <section id="expertise" class="fade-in">
-        <h2>Expertise / Skills</h2>
-        <div class="skills-grid">
-            <span class="skill-tag">Java</span>
-            <span class="skill-tag">C#</span>
-            <span class="skill-tag">JavaScript</span>
-            <span class="skill-tag">HTML</span>
-            <span class="skill-tag">CSS</span>
-            <span class="skill-tag">MySQL</span>
-            <span class="skill-tag">Database Design</span>
+            <h3>My Skills</h3>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript (Basics)</li>
+                <li>Java</li>
+                <li>C++</li>
+                <li>C#</li>
+            </ul>
         </div>
-    </section>
+    </div>
 
-    <section id="projects" class="fade-in">
-        <h2>Projects</h2>
-        <div class="projects-grid">
-            <div class="project-card">
-                <h3>Income & Expense Tracker</h3>
-                <span class="badge">Java</span>
-                <p>A Java application with login, MySQL database, and GUI using Swing.</p>
-            </div>
-            <div class="project-card">
-                <h3>MedicareMMCM</h3>
-                <span class="badge">Medical System</span>
-                <p>A medical clinic management system with user roles and database integration.</p>
+    <div id="projects" class="section">
+        <div class="container">
+            <h2>My Projects</h2>
+            
+            <div class="project-grid">
+                <div class="project">
+                    <h3>Income Tracker</h3>
+                    <p>A simple Java program to track money.</p>
+                </div>
+
+                <div class="project">
+                    <h3>Medical System</h3>
+                    <p>A system for clinics to manage patients.</p>
+                </div>
             </div>
         </div>
-    </section>
+    </div>
 
-    <section id="contact" class="fade-in">
-        <h2>Contact Information</h2>
-        <div class="contact-info">
-            <p><strong>Email:</strong> yourname@email.com</p>
-            <p><strong>Phone:</strong> +63 970 251 4629</p>
-            <p><strong>GitHub:</strong> <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a></p>
-            <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a></p>
+    <div id="achievements" class="section">
+        <div class="container">
+            <h2>My Achievements</h2>
+            <div class="achievements-grid">
+                <div class="achievement-card">
+                    <h3>Java Expert</h3>
+                    <p>Completed and pass the Java ITS.</p>
+                </div>
+                <div class="achievement-card">
+                    <h3>Dean's Lister</h3>
+                    <p>Successfully achieve and maintain dean's list in school year 2024-2025!</p>
+                </div>
+                <div class="achievement-card">
+                    <h3>President's Lister</h3>
+                    <p>Successfully achieve president's list in school year 2024-2025 3rd term!</p>
+                </div>
+                <div class="achievement-card">
+                    <h3>Best Program Presenter</h3>
+                    <p>Achieved an award for best presenter for java program!</p>
+                </div>
+            </div>
         </div>
-    </section>
-</main>
+    </div>
 
-<footer>
-    <p>&copy; 2025 James Conrad M Santiago. All Rights Reserved.</p>
-</footer>
+    <div id="contact" class="section">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <p>Email: yourname@email.com</p>
+            <p>Phone: +63 970 251 4629</p>
+        </div>
+    </div>
 
-<script src="script.js"></script>
+    <footer>
+        <div class="container">
+            <p>Copyright 2025 - James Santiago</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
